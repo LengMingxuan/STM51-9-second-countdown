@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>猩ision Build Log</h1>
+<h2>Project:</h2>
+H:\1LH諺璃\10.14\嬝鏃給數奀.uvproj
+Project File Date:  10/14/2019
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling 嬝鏃給數奀.c...
+linking...
+Program Size: data=13.0 xdata=0 code=235
+creating hex file from "嬝鏃給數奀"...
+"嬝鏃給數奀" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 嬝鏃給數奀.c...
+linking...
+Program Size: data=13.0 xdata=0 code=235
+creating hex file from "嬝鏃給數奀"...
+"嬝鏃給數奀" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 嬝鏃給數奀.c...
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C231: 'chipcs': redefinition
+嬝鏃給數奀.C(23): error C100: unprintable character 0x01 skipped
+Target not created
+Build target 'Target 1'
+compiling 嬝鏃給數奀.c...
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C231: 'chipcs': redefinition
+嬝鏃給數奀.C(23): error C100: unprintable character 0x01 skipped
+Target not created
+Build target 'Target 1'
+compiling 嬝鏃給數奀.c...
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C231: 'chipcs': redefinition
+Target not created
+Build target 'Target 1'
+compiling 嬝鏃給數奀.c...
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C231: 'chipcs': redefinition
+Target not created
+Build target 'Target 1'
+compiling 嬝鏃給數奀.c...
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C100: unprintable character 0xFF skipped
+嬝鏃給數奀.C(4): error C231: 'chipcs': redefinition
+Target not created

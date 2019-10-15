@@ -1,0 +1,74 @@
+C51 COMPILER V9.00   9S1                                                                   10/14/2019 17:19:17 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE 9S1
+OBJECT MODULE PLACED IN 9s1.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 9s1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          int k;
+   3          sbit datacs=P2^6;
+   4          sbit chipcs=P2^7;
+   5          unsigned char code discode1[] = {0x00,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
+   6          //数码管0~9带小数点
+   7          unsigned char second = 10;
+   8          //记录真秒
+   9          unsigned char  i=20;
+  10          void main ()
+  11          {       
+  12   1      
+  13   1              
+  14   1              TMOD=0x01;                      //定时器T0为方式1
+  15   1              TH0=0x4c;                       //设置定时器初值
+  16   1              TL0=0x00;       
+  17   1              EA=1;                                   //总中断开
+  18   1              ET0=1;                                  //开T0中断
+  19   1              TR0=1;                                  //启动T0        datacs=0;        P0=0x00;                          // 代表8位全亮        ch
+             -ipcs=1;        chipcs=0;
+  20   1              while(1)                                //循环等待
+  21   1              {
+  22   2      
+  23   2              }
+  24   1      }
+  25          void timer0() interrupt 1                       //T0中断程序
+  26          {       
+  27   1              TH0=0x4c;                               //重新赋初值
+  28   1              TL0=0x00;
+  29   1              i--;                                    //循环次数减1
+  30   1              if(i<=0)
+  31   1              {
+  32   2              i=20;
+  33   2          second --;
+  34   2          
+  35   2              
+  36   2              P0=0x7f; 
+  37   2              chipcs=1;
+  38   2              chipcs=0;
+  39   2              P0 = discode1[second];
+  40   2              datacs=1;
+  41   2              datacs=0;                         
+  42   2              }
+  43   1              if(second == 0){
+  44   2              EA=0;                                   //总中断开
+  45   2              ET0=0;                                  //开T0中断
+  46   2              TR0=0; 
+  47   2              P1=0x00;  }
+  48   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     85    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.00   9S1                                                                   10/14/2019 17:19:17 PAGE 2   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
