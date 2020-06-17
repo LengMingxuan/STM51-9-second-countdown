@@ -1,36 +1,43 @@
 #include<reg51.h>
 int k;
 sbit datacs=P2^6;
-sbit chipcs=P2^7;sbit chipcs=P2^7;ÿÿÿÿ
+sbit chipcs=P2^7;
+sbit chipcs=P2^7;
+????
 unsigned char code discode1[] = {0x00,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
-//ÊýÂë¹Ü0~9´øÐ¡Êýµã
+//?????0~9??§³????
 unsigned char second = 10;
-//¼ÇÂ¼ÕæÃë
+//???????
+//
 unsigned char  i=20;
 void main ()
 {
-	TMOD=0x01;			//¶¨Ê±Æ÷T0Îª·½Ê½1
-	TH0=0x4c;			//ÉèÖÃ¶¨Ê±Æ÷³õÖµ
+	TMOD=0x01;			//?????T0????1
+	TH0=0x4c;			//???????????
 	TL0=0x00;
-	P1=0x00;				//P1¿Ú8¸öLEDµãÁÁ
-	EA=1;					//×ÜÖÐ¶Ï¿ª
-	ET0=1;					//¿ªT0ÖÐ¶Ï
-	TR0=1;					//Æô¶¯T0
+	P1=0x00;				//P1??8??LED????
+	EA=1;					//???§Ø??
+	ET0=1;					//??T0?§Ø?
+	TR0=1;					//????T0
 	datacs=1;
 	datacs=0;
-	P0=0x7f;                          // ´ú±í8Î»È«ÁÁ
+	P0=0x7f;                          // ????8¦Ë???
 	chipcs=1;
-	chipcs=0;        datacs=0;        P0=0x00;                          // ´ú±í8Î»È«ÁÁ        chipcs=1;        chipcs=0;
-	while(1)				//Ñ­»·µÈ´ý
+	chipcs=0;
+        datacs=0;
+        P0=0x00;                          // ????8¦Ë???
+        chipcs=1;
+        chipcs=0;
+	while(1)				//??????
 	{
 
 	}
 }
-void timer0() interrupt 1			//T0ÖÐ¶Ï³ÌÐò
+void timer0() interrupt 1			//T0?§Ø????
 {
-	TH0=0x4c;				//ÖØÐÂ¸³³õÖµ
+	TH0=0x4c;				//????????
 	TL0=0x00;
-	i--;					//Ñ­»·´ÎÊý¼õ1
+	i--;					//?????????1
 	if(i<=0)
 	{
 	i=20;
